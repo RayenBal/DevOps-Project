@@ -30,7 +30,8 @@ This project is a CI/CD pipeline designed for robust and secure application depl
 ├── docker-compose.yml        # Docker Compose file for multi-service setup
 ├── prometheus-config/        # Configuration files for Prometheus
 └── README.md                 # Project documentation
-#🛠 Technologies Used
+
+## 🛠 Technologies Used
 CI/CD Pipeline: Jenkins
 Code Quality & Security: SonarQube, OWASP Dependency-Check, Lynis
 Containerization: Docker, Docker Compose
@@ -38,7 +39,7 @@ Dependency Management: Nexus
 Monitoring: Prometheus, Grafana
 Security: Falco, Pumba
 Programming Language: Java (Spring Boot application)
-##🛠 Setup & Installation
+## 🛠 Setup & Installation
 Prerequisites
 Java Development Kit (JDK)
 Docker
@@ -60,7 +61,7 @@ docker-compose up -d
 Access Jenkins:
 
 Set up the Jenkins pipeline using the provided Jenkinsfile-advanced.
-🔄 Advanced DevOps Pipeline
+## 🔄 Advanced DevOps Pipeline
 This pipeline covers comprehensive CI/CD, monitoring, and security processes:
 
 Git Checkout: Clones the specified branch from the repository.
@@ -80,7 +81,7 @@ Twilio SMS: Sends an SMS alert with the build status.
 Email: Sends an HTML email with detailed build and report links.
 
 
-#📊 Reports & Notifications
+## 📊 Reports & Notifications
 JaCoCo Coverage Report: Code coverage results.
 OWASP Dependency-Check Report: Summary of dependency vulnerabilities.
 Lynis Report: System hardening and security validation.
@@ -88,7 +89,7 @@ Twilio SMS Alert: Notifies on build completion.
 Email Notification: Detailed build report with links to coverage and security reports.
 
 
-#📊 Monitoring & Security
+## 📊 Monitoring & Security
 Prometheus: Collects metrics from Docker containers and application endpoints.
 Grafana: Visualizes metrics, helping to monitor system health.
 Falco: Monitors runtime behaviors to detect anomalies.
@@ -96,5 +97,5 @@ Lynis: Scans the host for potential vulnerabilities.
 Pumba: Simulates network faults and container failures for resilience testing.
 
 
-##📜 License
+## 📜 License
 This project is licensed under the MIT License. See the LICENSE file for details.

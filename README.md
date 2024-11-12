@@ -78,17 +78,23 @@ Server Hardening Validation: Runs Lynis for server security checks and publishes
 Notifications:
 Twilio SMS: Sends an SMS alert with the build status.
 Email: Sends an HTML email with detailed build and report links.
+
+
 #📊 Reports & Notifications
 JaCoCo Coverage Report: Code coverage results.
 OWASP Dependency-Check Report: Summary of dependency vulnerabilities.
 Lynis Report: System hardening and security validation.
 Twilio SMS Alert: Notifies on build completion.
 Email Notification: Detailed build report with links to coverage and security reports.
+
+
 #📊 Monitoring & Security
 Prometheus: Collects metrics from Docker containers and application endpoints.
 Grafana: Visualizes metrics, helping to monitor system health.
 Falco: Monitors runtime behaviors to detect anomalies.
 Lynis: Scans the host for potential vulnerabilities.
 Pumba: Simulates network faults and container failures for resilience testing.
+
+
 ##📜 License
 This project is licensed under the MIT License. See the LICENSE file for details.

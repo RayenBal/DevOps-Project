@@ -134,5 +134,7 @@ The pipeline automates the full software lifecycle, including code quality check
 ---
 
 ## 📜 License
-This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for more details.
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for more details.  
+Maintained by [Med Rayen Balghouthi](https://github.com/RayenBal).
+
 

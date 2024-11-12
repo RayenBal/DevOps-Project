@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# Check if Talisman is installed
+if ! command -v talisman &> /dev/null
+then
+    echo "Talisman could not be found. Please install it first."
+    exit 1
+fi
+
+# Run Talisman to scan for secrets or sensitive data in the code
+talisman --scan .

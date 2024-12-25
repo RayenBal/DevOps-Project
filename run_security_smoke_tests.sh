@@ -1,15 +1,15 @@
 #!/bin/bash
 
-echo "Running security smoke tests..."
 
-# Set a dummy secret key if not set
-export MY_SECRET_KEY=${MY_SECRET_KEY:-"dummy_value_for_testing"}
+DB_HOST="localhost"
+DB_USER="user"
+DB_PASS="password"
+DB_NAME="mydatabase"
 
-# Check if the key is set, if not, print a warning
-if [ "$MY_SECRET_KEY" == "dummy_value_for_testing" ]; then
-  echo "Warning: Using a dummy secret key!"
+# Try to connect to the database and list tables
+if mysql -h $DB_HOST -u $DB_USER -p$DB_PASS -e "SHOW TABLES;" $DB_NAME; then
+    echo "PASS: Successfully connected to the database."
+else
+    echo "FAIL: Could not connect to the database."
+    exit 1
 fi
-
-# Now, you can proceed with the tests using the dummy key
-echo "Running tests with secret key: $MY_SECRET_KEY"
-# Your actual test commands would go here

@@ -223,7 +223,7 @@ pipeline {
             }
         }
 
-       /* stage('Send SMS Notification') {
+        stage('Send SMS Notification') {
     steps {
         script {
             // Use withCredentials block to securely inject credentials
@@ -251,7 +251,7 @@ pipeline {
 
         }
     }
-        }*/
+        }
 
 stage('Send Email Notification') {
     steps {

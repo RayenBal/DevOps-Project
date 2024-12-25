@@ -238,7 +238,7 @@ pipeline {
 
     // Send SMS using Twilio API with curl
     sh """
-    curl 'https://api.twilio.com/2010-04-01/Accounts/${TWILIO_ACCOUNT_SID}/Messages.json' -X POST --data-urlencode 'To=+21628221389' --data-urlencode 'MessagingServiceSid=MG6f26b98c01c74e1ecef4eacb9ccd7b3e' --data-urlencode 'Body=${message}' -u ${TWILIO_ACCOUNT_SID}:${TWILIO_AUTH_TOKEN}
+    curl 'https://api.twilio.com/2010-04-01/Accounts/${TWILIO_ACCOUNT_SID}/Messages.json' -X POST --data-urlencode 'To=+21628221389' --data-urlencode 'MessagingServiceSid=MG3b04f563f74ce3574964804eab86a120' --data-urlencode 'Body=${message}' -u ${TWILIO_ACCOUNT_SID}:${TWILIO_AUTH_TOKEN}
 """
 }
 

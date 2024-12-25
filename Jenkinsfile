@@ -163,7 +163,7 @@ pipeline {
         
         stage('Start Monitoring Containers') {
             steps {
-                sh 'docker start 5-nids-1-rayen-balghouthi-g1-prometheus-1 grafana'
+                sh 'docker start devsecops-prometheus-1 grafana'
             }
             post {
                 failure {

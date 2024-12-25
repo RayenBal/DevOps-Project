@@ -189,8 +189,7 @@ pipeline {
         }
         failure {
             echo 'Smoke tests failed!'
-            // Optional: Fail the build if smoke tests fail
-            currentBuild.result = 'FAILURE'
+            
         }
     }
 }

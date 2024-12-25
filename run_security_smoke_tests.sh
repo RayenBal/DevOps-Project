@@ -1,15 +1,15 @@
 #!/bin/bash
 
-# Set the database details
-DB_HOST="devsecops-mysqldb-1"  # Name of the MySQL container
-DB_USER="root"  # Use root or the correct user
-DB_PASS="root"  # Ensure this matches your MySQL root password
-DB_NAME="ski-project3"  # Replace with your actual database name
+# Define the URL of your service (replace with your actual service URL and port)
+URL="http://localhost:8080/health"
 
-# Try to connect to the database and list tables
-if mysql -h $DB_HOST -u $DB_USER -p$DB_PASS -e "SHOW TABLES;" $DB_NAME; then
-    echo "PASS: Successfully connected to the database."
+# Use curl to check if the service is up
+response=$(curl --write-out "%{http_code}" --silent --output /dev/null $URL)
+
+# Check the response code
+if [[ "$response" -eq 200 ]]; then
+    echo "PASS: Service is up and healthy (HTTP 200)."
 else
-    echo "FAIL: Could not connect to the database."
+    echo "FAIL: Service is down or unresponsive. HTTP Code: $response"
     exit 1
 fi

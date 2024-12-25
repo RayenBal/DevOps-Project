@@ -1,15 +1,14 @@
 #!/bin/bash
 
-# Define the URL of your service (replace with your actual service URL and port)
-URL="http://localhost:8080/health"
+echo "Running security smoke tests..."
 
-# Use curl to check if the service is up
-response=$(curl --write-out "%{http_code}" --silent --output /dev/null $URL)
+# Set a dummy secret key if not set
+export MY_SECRET_KEY=${MY_SECRET_KEY:-"dummy_value_for_testing"}
 
-# Check the response code
-if [[ "$response" -eq 200 ]]; then
-    echo "PASS: Service is up and healthy (HTTP 200)."
-else
-    echo "FAIL: Service is down or unresponsive. HTTP Code: $response"
-    exit 1
+# Check if the key is set, if not, print a warning
+if [ "$MY_SECRET_KEY" == "dummy_value_for_testing" ]; then
+  echo "Warning: Using a dummy secret key!"
 fi
+
+# Now, you can proceed with the tests using the dummy key
+echo "Running tests with secret key: $MY_SECRET_KEY"

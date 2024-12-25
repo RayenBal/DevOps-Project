@@ -178,9 +178,9 @@ pipeline {
     steps {
         script {
             // Make the script executable
-            sh 'chmod +x ./run_smoke_tests.sh'
+            sh 'chmod +x ./run_security_smoke_tests.sh'
             // Run the script
-            sh './run_smoke_tests.sh'
+            sh './run_security_smoke_tests.sh'
         }
     }
     post {
